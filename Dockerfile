@@ -78,10 +78,6 @@ RUN     cd /opt/graphite/webapp/graphite && python manage.py syncdb --noinput
 # Configure Grafana
 ADD     ./grafana/config.js /src/grafana/config.js
 
-# Add the default dashboards
-RUN     mkdir /src/dashboards
-ADD     ./grafana/dashboards/* /src/dashboards/
-
 # Configure nginx and supervisord
 ADD     ./nginx/nginx.conf /etc/nginx/nginx.conf
 ADD     ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
@@ -100,7 +96,8 @@ EXPOSE  8125/udp
 # StatsD Management port
 EXPOSE  8126
 
-
+# Graphite Carbon plaintext port - used by collectd write-grahite plugin
+EXPOSE 2003
 
 # -------- #
 #   Run!   #

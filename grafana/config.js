@@ -5,18 +5,15 @@ function (Settings) {
     datasources: {
       graphite: {
         type: 'graphite',
-        url: "/graphite",
+        url: "/graphite"
       },
       elasticsearch: {
         type: 'elasticsearch',
         url: "/elasticsearch",
         index: 'grafana-dash',
-        grafanaDB: true,
+        grafanaDB: true
       }
     },
-
-    // default start dashboard
-    default_route: '/dashboard/db/welcome',
 
     // Elasticsearch index for storing dashboards
     grafana_index: "grafana-dash",
