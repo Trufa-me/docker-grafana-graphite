@@ -62,7 +62,8 @@ MAX_OPEN_FILES=65535
 LOG_DIR=/var/log/$NAME
 
 # Elasticsearch data directory
-DATA_DIR=/var/lib/$NAME
+# DATA_DIR=/var/lib/$NAME
+DATA_DIR=/opt/$NAME
 
 # Elasticsearch work directory
 WORK_DIR=/tmp/$NAME
