@@ -82,6 +82,8 @@ ADD     ./grafana/config.js /src/grafana/config.js
 ADD     ./nginx/nginx.conf /etc/nginx/nginx.conf
 ADD     ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
+# Add the startup script
+ADD     ./run.sh /usr/local/bin/run_all_the_things
 
 # ---------------- #
 #   Expose Ports   #
