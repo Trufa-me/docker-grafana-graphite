@@ -1,3 +1,11 @@
 #! /bin/bash
 
-docker build -t kamon/grafana_graphite .
+REGISTRY=${1?"Usage: $0 registry version"}
+VERSION=${2?"Usage: $0 registry version"}
+
+docker build -t ${REGISTRY}/trufa/grafana .
+
+docker tag ${REGISTRY}/trufa/grafana:latest ${REGISTRY}/trufa/grafana:${VERSION}
+
+docker push ${REGISTRY}/trufa/grafana
+
