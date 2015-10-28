@@ -96,11 +96,11 @@ EXPOSE  8125/udp
 # StatsD Management port
 EXPOSE  8126
 
-# Graphite Carbon plaintext port - used by collectd write-grahite plugin
+# Graphite Carbon plaintext port - used by collectd write-graphite plugin
 EXPOSE 2003
 
 # -------- #
 #   Run!   #
 # -------- #
 
-CMD     ["/usr/bin/supervisord"]
+CMD     ["/bin/bash"]
