@@ -96,6 +96,9 @@ EXPOSE  8126
 # Graphite Carbon plaintext port - used by collectd write-graphite plugin
 EXPOSE 2003
 
+# Graphite webapp port - for seyren to access graphite data
+EXPOSE 8000
+
 # -------- #
 #   Run!   #
 # -------- #
